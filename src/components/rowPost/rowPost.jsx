@@ -6,7 +6,7 @@ import {API_KEY, imageUrl} from '../../constants/constants'
 
 function RowPost(props) {
     const [movies,setMovies]=useState([])
-    const [urlid,seturlid]=useState([])
+    const [urlid,seturlid]=useState('')
     useEffect(()=>{
       axios.get(props.url).then((response)=>{
         console.log(response.data)
@@ -33,6 +33,11 @@ function RowPost(props) {
         }
       })
   }
+
+  const CloseYoutube =()=>{
+    seturlid(null)
+}
+
   return (
     <div className='row'>
         <h2>{props.title}</h2>
@@ -42,6 +47,11 @@ function RowPost(props) {
             <img onClick={()=>handleMovie(obj.id)} className={props.isSmall? "smallposter":"poster"} src={`${imageUrl+obj.backdrop_path}`} alt="card in row" />  
           )}           
         </div>
+
+      <div className='closeButton'>
+        {urlid && <button className='closebutton' onClick={CloseYoutube} >Close</button>}
+      </div>
+
         {urlid && <Youtube opts={opts} videoId={urlid.key}/>}
     </div>
   )

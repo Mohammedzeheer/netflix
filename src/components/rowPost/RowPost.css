@@ -28,3 +28,22 @@
 .poster:hover{
   transform: scale(1.1);
 }
+
+.closeButton{
+    display: flex;
+    justify-content: center;
+   
+}
+.closebutton{
+    color: #fff;
+    font-size: 25px;
+  background: none;
+  border:4px;
+  border-color: #fff;
+  border-radius: 4px;
+  
+}
+.closebutton:hover{
+    color: #fff;
+    background:#f51e5b;
+}

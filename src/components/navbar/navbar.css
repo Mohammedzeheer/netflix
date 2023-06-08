@@ -22,3 +22,30 @@
     right:20px;
     width:30px;
 }
+
+
+.buttons{
+    position: fixed;
+    top:2px;
+    right:70px;
+    /* width:30px; */
+    color:white;
+    outline:none;
+    border:none;
+    font-weight:700;
+    border-radius: 5px;
+    /* margin-left: 75rem; */
+    margin-top:3px;
+    margin-bottom:3px;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    background-color:red;
+    cursor:pointer;
+}
+
+buttons:hover{
+    color:black;
+    background-color: #e6e6e6;
+}
